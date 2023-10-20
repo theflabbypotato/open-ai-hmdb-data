@@ -8,16 +8,21 @@ from langchain.llms import HuggingFacePipeline
 from langchain.document_loaders.csv_loader import CSVLoader
 
 
-#Maybe can try HuggingFace as well
+#Tried HuggingFace as well
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
 load_dotenv()
-os.environ['OPENAI_API_KEY'] = "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"
-os.environ['HUGGINGFACEHUB_API_TOKEN'] ='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'
+# Put your own API Keys here:
+# https://platform.openai.com/account/api-keys 
+# ^ for openai to make your own free api key
+
+os.environ['OPENAI_API_KEY'] = ""
+os.environ['HUGGINGFACEHUB_API_TOKEN'] =''
 
 # APP
+# Have to run
 st.title("HMDB Serum Inquiry")
 
 user_csv1 = st.file_uploader("Upload your CSV file", type="csv")
